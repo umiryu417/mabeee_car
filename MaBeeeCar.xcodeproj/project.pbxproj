@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D72666B31D9CB51B00431312 /* MaBeeeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72666B21D9CB51B00431312 /* MaBeeeSDK.framework */; };
 		D72666B41D9CB51B00431312 /* MaBeeeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D72666B21D9CB51B00431312 /* MaBeeeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D76440821D9E5A9400FEF6CD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D76440811D9E5A9400FEF6CD /* README.md */; };
 		D7F59FE71D8ED77F00B4F708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F59FE61D8ED77F00B4F708 /* AppDelegate.swift */; };
 		D7F59FE91D8ED77F00B4F708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F59FE81D8ED77F00B4F708 /* ViewController.swift */; };
 		D7F59FEC1D8ED77F00B4F708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F59FEA1D8ED77F00B4F708 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		D72666B21D9CB51B00431312 /* MaBeeeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaBeeeSDK.framework; sourceTree = "<group>"; };
+		D76440811D9E5A9400FEF6CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D7F59FE31D8ED77F00B4F708 /* MaBeeeCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaBeeeCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F59FE61D8ED77F00B4F708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F59FE81D8ED77F00B4F708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		D7F59FDA1D8ED77F00B4F708 = {
 			isa = PBXGroup;
 			children = (
+				D76440811D9E5A9400FEF6CD /* README.md */,
 				D72666B21D9CB51B00431312 /* MaBeeeSDK.framework */,
 				D7F59FE51D8ED77F00B4F708 /* MaBeeeCar */,
 				D7F59FE41D8ED77F00B4F708 /* Products */,
@@ -116,7 +119,6 @@
 				TargetAttributes = {
 					D7F59FE21D8ED77F00B4F708 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 77XFDCUW94;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -157,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76440821D9E5A9400FEF6CD /* README.md in Sources */,
 				D7F59FE91D8ED77F00B4F708 /* ViewController.swift in Sources */,
 				D7F59FE71D8ED77F00B4F708 /* AppDelegate.swift in Sources */,
 			);
@@ -281,7 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 77XFDCUW94;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -298,7 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 77XFDCUW94;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
