@@ -9,6 +9,13 @@ MaBeee Car 制御プログラム
 
 MaBeeeSDK.framework モジュール（フォルダ）をMaBeeeCar.xcodeprojファイルと同じフォルダにコピーしてコンパイルしてください。
 
+# MaBee3 Car実装例
+
+https://www.youtube.com/watch?v=1_Q-57uI3aE
+https://www.youtube.com/watch?v=lb3oau1W_Tg
+
+
+
 # 履歴
 
 2016.9.30 左右の電池残量などの理由により、まっすぐに進まない現象が発生しています。
