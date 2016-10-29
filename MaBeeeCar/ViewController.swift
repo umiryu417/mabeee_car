@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var 左MaBeee出力: UILabel!
     @IBOutlet weak var 右MaBeee出力: UILabel!
 
-    @IBOutlet weak var アクセルMaBeee: UILabel!
-    @IBOutlet weak var ハンドルMaBeee: UILabel!
+    @IBOutlet weak var 左MaBeee: UILabel!
+    @IBOutlet weak var 右MaBeee: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,39 +52,39 @@ class ViewController: UIViewController {
         self.右MaBeee出力.text = String(Int32(右*100))
         
         for device in MaBeeeApp.instance().devices() {
-            if(self.アクセルMaBeee.text == device.name) {
+            if(self.左MaBeee.text == device.name) {
                 device.pwmDuty = Int32(左*100)
                 continue
             }
-            if(self.ハンドルMaBeee.text == device.name) {
+            if(self.右MaBeee.text == device.name) {
                 device.pwmDuty = Int32(右*100)
-                break;
+                continue;
             }
         }
         
     }
-    
+
     func 接続チェック() {
-        self.アクセルMaBeee.text = "接続なし"
-        self.ハンドルMaBeee.text = "接続なし"
         if let mabeee = MaBeeeApp.instance() {
 //            if(mabeee.devices().count == 0) {
 //                return;
 //            }
             for device in mabeee.devices() {
-                if(self.アクセルMaBeee.text == "接続なし") {
-                    self.アクセルMaBeee.text = device.name
+                if(self.左MaBeee.text == "接続なし") {
+                    self.左MaBeee.text = device.name
                     continue
                 }
-                if(self.ハンドルMaBeee.text == "接続なし") {
-                    self.ハンドルMaBeee.text = device.name
+                if(self.右MaBeee.text == "接続なし") {
+                    self.右MaBeee.text = device.name
                     break;
                 }
             }
-            let when = DispatchTime.now() + 2.0
-            DispatchQueue.main.asyncAfter(deadline: when, execute: {
-                self.接続チェック()
-            })
+            if(self.左MaBeee.text == "接続なし" || self.右MaBeee.text == "接続なし") {
+                let when = DispatchTime.now() + 2.0
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                    self.接続チェック()
+                })
+            }
         }
     }
     
@@ -97,13 +97,15 @@ class ViewController: UIViewController {
     @IBAction func MaBeee接続(_ sender: UIButton) {
         let mabeee = MaBeeeScanViewController()
         mabeee.show(self)
+        self.左MaBeee.text = "接続なし"
+        self.右MaBeee.text = "接続なし"
         self.接続チェック()
     }
     
     @IBAction func MaBeee交換(_ sender: UIButton) {
-        let tmp = self.アクセルMaBeee.text
-        self.アクセルMaBeee.text = self.ハンドルMaBeee.text
-        self.ハンドルMaBeee.text = tmp
+        let tmp = self.左MaBeee.text
+        self.左MaBeee.text = self.右MaBeee.text
+        self.右MaBeee.text = tmp
     }
 }
 
